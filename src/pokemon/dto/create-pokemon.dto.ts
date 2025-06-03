@@ -1,4 +1,4 @@
-import { IsNumber, IsPositive, IsString, Min } from "class-validator";
+import { IsNumber, IsPositive, IsString, Min, MinLength } from "class-validator";
 
 export class CreatePokemonDto {
 
@@ -8,5 +8,6 @@ export class CreatePokemonDto {
     no: number;
 
     @IsString()
+    @MinLength(1)
     name: string;
 }
