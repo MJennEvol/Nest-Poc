@@ -9,8 +9,10 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true,
       forbidNonWhitelisted: true,
+      //cuesta memoria hacer la transformación
+
     })
-  )
-  await app.listen(process.env.PORT ?? 3000);
+  ),
+    await app.listen(process.env.PORT ?? 3000);
 }
 bootstrap();
